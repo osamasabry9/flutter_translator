@@ -14,7 +14,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       logo:Image.asset('assets/logo.png') ,
       backgroundColor: Colors.white,
       navigator: PrincipalScreen(),
-      durationInSeconds: 14,
+      durationInSeconds: 4,
       logoSize: 100.0,
 
       //type: CustomSplashType.StaticDuration,

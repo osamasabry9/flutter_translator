@@ -10,7 +10,7 @@ class PrincipalScreen extends StatefulWidget {
 
 class _PrincipalScreenState extends State<PrincipalScreen> {
   int? _selectedIndex;
-  static List<Widget> _widgetOptions = <Widget>[
+  static final List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     HistoryScreen(),
     AboutScreen(),
@@ -47,7 +47,7 @@ class _PrincipalScreenState extends State<PrincipalScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Traductor flutter"),
+        title: const Text("Translator flutter"),
       ),
       body: SafeArea(
         child: IndexedStack(

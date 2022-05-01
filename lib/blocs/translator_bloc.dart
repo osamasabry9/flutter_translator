@@ -6,8 +6,8 @@ class TranslatorBloc {
   String? _toLang;
   String? _google;
   TranslatorBloc() {
-    _fromLang = "es";
-    _toLang = "en";
+    _fromLang = "en";
+    _toLang = "pt";
     _google = "";
   }
   final _controllerText = StreamController<String>();
@@ -28,7 +28,7 @@ class TranslatorBloc {
       final translator = GoogleTranslator();
       if (text != null) {
         _google = (await translator.translate(text,
-            from: '$_fromLang', to: '$_toLang')) as String;
+            from: _fromLang!, to: _toLang!)).toString();
         if (_google != null) {
           print("$_google");
           _controllerText.add(_google!);

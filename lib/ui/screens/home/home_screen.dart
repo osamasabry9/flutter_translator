@@ -35,8 +35,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
     _size = new Responsive(context);
     change = false;
-    fromLang = "es";
-    toLang = "en";
+    fromLang = "en";
+    toLang = "pt";
     super.initState();
   }
 
@@ -113,14 +113,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       initialData: "",
                       builder: (context, snapshot) {
                         return Text(
-                          (snapshot.data == "en") ? "Ingles" : "Español",
+                          (snapshot.data == "en") ? "English" : "Portuguese(Brazil)",
                           style: TextStyle(
                             color: Colors.grey[600],
                           ),
                         );
                       },
                     ),
-                    onPressed: () => print(change ? "Ingles" : "Español"),
+                    onPressed: () => print(change ?  "Portuguese(Brazil)" :"English"),
                   ),
                 ),
                 Container(
@@ -139,14 +139,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       initialData: "",
                       builder: (context, snapshot) {
                         return Text(
-                          (snapshot.data == "es") ? "Español" : "Inglés",
+                          (snapshot.data == "pt") ? "Portuguese(Brazil)" : "English",
                           style: TextStyle(
                             color: Colors.grey[600],
                           ),
                         );
                       },
                     ),
-                    onPressed: () => print(change ? "Ingles" : "Español"),
+                    onPressed: () => print(change ? "English" : "Portuguese(Brazil)"),
                   ),
                 ),
               ],
